@@ -15,6 +15,12 @@ export default {
 		let url = someHost + requestUrl.pathname;
 		if (url === 'https://bento.me/') {
 			url = 'https://bento.me/itsmingjie';
+		} else if (url === 'https://bento.me/login') {
+			return Response.redirect('https://bento.me/login', 302);
+		} else if (url === 'https://bento.me/signup') {
+			return Response.redirect('https://bento.me/signup', 302);
+		} else if (url === 'https://bento.me/undefined') {
+			return Response.redirect('https://bento.me', 302);
 		}
 
 		const init = {
