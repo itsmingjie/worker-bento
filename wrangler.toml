@@ -1,0 +1,15 @@
+name = "bento"
+main = "src/index.ts"
+compatibility_date = "2023-08-21"
+workers_dev = true
+
+[vars]
+BASE_URL = "http://127.0.0.1:8787"
+
+[env.production]
+routes = [
+ { pattern = "mingjie.dev", custom_domain = true }
+]
+
+[env.production.vars]
+BASE_URL = "https://mingjie.dev"
